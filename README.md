@@ -86,4 +86,5 @@ If it's working fine, do the following:
 <img src="static/images/flask.png"><h1>Flask: Run web page</h1>
 <img src="static/images/bootstrap.png"><h1>Bootstrap: Framework UI</h1>
 
-
+**<h1 style = "text-align: center">Now... invite you to try it out!</h1>**
+<img   style = "display: block;margin-left: auto;margin-right: auto;width: 25%;"   src = "static/run.gif">

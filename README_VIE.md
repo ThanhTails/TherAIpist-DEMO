@@ -86,4 +86,5 @@ Nếu đã hoạt động trơn tru, bạn hãy làm các thao tác sau:
 <img src = "static/images/flask.png"><h1>Flask: Chạy trang web</h1>
 <img src = "static/images/bootstrap.png"><h1>Bootstrap: Framework UI</h1>
     
-
+**<h1 style="text-align: center">Bây giờ...mời các bạn trải nghiệm!</h1>**
+<img   style = "display: block;margin-left: auto;margin-right: auto;width: 25%;"   src = "static/run.gif">
