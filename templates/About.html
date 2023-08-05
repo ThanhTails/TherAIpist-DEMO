@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'about.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'navbar.css') }}" />
+    <script src="{{ url_for('static', filename = 'style1.js') }}"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+
+    <!-- fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Original Surfer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+
+    <link rel="icon" type="image/x-icon" href="{{url_for("static", filename = "Dolf_Icon.png")}}">
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-custom navbar-mainbg">
+        <a class="navbar-brand navbar-logo" href="{{url_for("home")}}" style="font-family: Original Suffer, sans-serif;"><b>Dolphin AI</b></a>
+        <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars text-white"></i></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <div class="hori-selector">
+              <div class="left"></div>
+              <div class="right"></div>
+            </div>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for("home")}}"><i class="fas fa-tachometer-alt"></i>Home/Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for("dolphin")}}"><i class="far fa-clone"></i>Dolphins</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for("calendar")}}"><i class="far fa-calendar-alt"></i>Events</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{{url_for("about")}}"><i class="far fa-chart-bar"></i>About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for("documentation")}}"><i class="far fa-copy"></i>Documents</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container-fluid" style="background-image: url({{ url_for('static', filename = 'oceanbg.jpg') }});">
+        <div class="container" style = "padding-top: 100px;padding-bottom: 100px;">
+          <h1 style="font-family: Original Surfer, sans-serif;color: #000000; text-align:center" class = "animate__animated animate__fadeInUp">Dolphin AI</h1>
+          <br />
+          <p class="" style="text-align: center;font-size: 50px;">
+            <b>About</b>
+          </p>
+        </div>
+      </div>
+      <div class = "container-fluid" style = "background-color: #f5f5f5;padding-top: 30px;padding-bottom: 30px;">
+        <div class = "container" style="padding-top: 20px;padding-bottom: 20px;">
+          <div class="container" style = "background-color: 	#FFEFD5;">
+            <img src = "{{url_for('static', filename = "STEAM.png")}}" class = "centered" alt = "STEAMHacks icon" style = "display: block;margin-left: auto;margin-right: auto;width: 25%;">
+            <h1 style="font-family: Orbitron, sans-serif; color: 	#FF69B4;text-align: center;" class="web-title centered">For Hacker's Round 1 of STEAMHacks Vietnam Competition</h1>
+            <br />
+            <h3 style = "text-align: center;"><b>About</b></h3>
+            <p style = "text-align: center;">This is a project that apply an AI chatbot as a dolphin (<span style = "color:red">ye, dolphin can talk :3</span>). It can tell about what you asked as simple and accurate as possible.<br><span style = "color: #FF1493;">There's still more features to be updated soon.</span></p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="container" style="background-color: #f5f5f5;">
+            <div class="row">
+              <h1 style = "font-family: Orbitron, sans-serif;text-align: center;">Frameworks</h1>
+              <br>
+              <div class = "col-sm-3">
+                <img src = "{{url_for("static", filename = "flask.png")}}">
+                <br>
+                <h3>Flask</h3>
+                <br>
+                <p>Python web framework</p>
+              </div>
+              <div class = "col-sm-3">
+                <img src = "{{url_for("static", filename = "Tensorflow.png")}}">
+                <br>
+                <h3>Tensorflow</h3>
+                <br>
+                <p>For AI Mechanic</p>
+              </div>
+              <div class = "col-sm-3">
+                <img src = "{{url_for("static", filename = "bootstrap.png")}}">
+                <br>
+                <h3>Bootstrap</h3>
+                <br>
+                <p>Web UI framework</p>
+              </div>
+              <div class = "col-sm-3">
+                <h1 style = "color: blue;">Animate.css</h1>
+                <br>
+                <h3>Animate.css</h3>
+                <br>
+                <p>CSS animation framework</p>
+              </div>
+            </div>
+            <div class="row" style = "padding-top: 30px;padding-bottom: 30px;">
+              <h1 style = "font-family: Orbitron, sans-serif;text-align: center;">Creator</h1>
+              <br>
+              <div class = "col-sm-12">
+                <div class = "row">
+                  <div class = "col-sm-6">
+                    <img src = "{{url_for('static', filename = "creator_avatar.png")}}" class = "centered" alt = "STEAMHacks icon" style = "display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 25%;border-radius: 50%;">
+                  </div>
+                  <div class = "col-sm-6">
+                    <h1><b>Trần Viết Thành</b></h1>
+                    <p>A high-school student learning technology.</p>
+                    <h3><b>Contact through email</b></h3>
+                    <p><b>vietthanh23022007@gmail.com<br>thanhtv022007@gmail.com<br>vietthanh2302@hotmail.com</b></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer class="page-footer font-small" style = "background-color: aqua;">
+        <!-- Grid column -->
+        <div class = "row">
+          <div class="col-md-6 mt-md-0 mt-3">
+            <!-- Content -->
+            <h5 class="text-uppercase font-weight-bold" style = "text-align: center;">Made by <span style = "color:	#FFD700">Trần Viết Thành</span></h5>
+          </div>
+          <div class="col-md-6 mt-md-0 mt-3">
+            <!-- Content -->
+            <h5 class="text-uppercase font-weight-bold" style = "text-align: center;">For <span style = "color:	#FF1493	">STEAM Vietnam</span></h5>
+          </div>
+        </div>
+        <!-- Grid column -->
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© Taylor's 2023 STEAMHacks Competition Project Copyright</div>
+        <h6 style = "text-align: center;"><b>Version 0.5</b></h6>
+        <!-- Copyright -->
+
+      </footer>
+    </div>
+    <script>
+      // ---------Responsive-navbar-active-animation-----------
+      function test() {
+        var tabsNewAnim = $('#navbarSupportedContent')
+        var selectorNewAnim = $('#navbarSupportedContent').find('li').length
+        var activeItemNewAnim = tabsNewAnim.find('.active')
+        var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight()
+        var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth()
+        var itemPosNewAnimTop = activeItemNewAnim.position()
+        var itemPosNewAnimLeft = activeItemNewAnim.position()
+        $('.hori-selector').css({
+          top: itemPosNewAnimTop.top + 'px',
+          left: itemPosNewAnimLeft.left + 'px',
+          height: activeWidthNewAnimHeight + 'px',
+          width: activeWidthNewAnimWidth + 'px'
+        })
+        $('#navbarSupportedContent').on('click', 'li', function (e) {
+          $('#navbarSupportedContent ul li').removeClass('active')
+          $(this).addClass('active')
+          var activeWidthNewAnimHeight = $(this).innerHeight()
+          var activeWidthNewAnimWidth = $(this).innerWidth()
+          var itemPosNewAnimTop = $(this).position()
+          var itemPosNewAnimLeft = $(this).position()
+          $('.hori-selector').css({
+            top: itemPosNewAnimTop.top + 'px',
+            left: itemPosNewAnimLeft.left + 'px',
+            height: activeWidthNewAnimHeight + 'px',
+            width: activeWidthNewAnimWidth + 'px'
+          })
+        })
+      }
+      $(document).ready(function () {
+        setTimeout(function () {
+          test()
+        })
+      })
+      $(window).on('resize', function () {
+        setTimeout(function () {
+          test()
+        }, 500)
+      })
+      $('.navbar-toggler').click(function () {
+        $('.navbar-collapse').slideToggle(300)
+        setTimeout(function () {
+          test()
+        })
+      })
+      
+      // --------------add active class-on another-page move----------
+      jQuery(document).ready(function ($) {
+        // Get current path and find target link
+        var path = window.location.pathname.split('/').pop()
+      
+        // Account for home page with empty path
+        if (path == '') {
+          path = 'index.html'
+        }
+      
+        var target = $('#navbarSupportedContent ul li a[href="' + path + '"]')
+        // Add active class to target link
+        target.parent().addClass('active')
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/navbar.css')}}" />
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/footer.css')}}" />
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/style-blog-info.css')}}" />
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+
+    <!-- fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- -============================================NAVBAR=================================== -->
+    <nav class="navbar navbar-expand navbar-custom">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="static/images/house.png" class="nav-img" id="nav-img" /></a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="{{ url_for('home') }}" style="font-weight: bold;" id="nav-txt">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('home') }}" style="font-weight: bold;" id="nav-txt">Get Help</a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('signin') }}" style="font-weight: bold;" id="nav-txt">Sign in</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('register') }}" style="background-color: #fddada;border-radius:20%;font-weight: bold;" id="nav-txt">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><img src="static/images/dark/user2.png" class="nav-img" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 3rd navbar - main navbar -->
+    <nav class="navbar navbar-expand-sm navbar-custom2">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="{{ url_for('blog') }}" style="font-weight: bold;" id="nav-txt">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" style="font-weight: bold;" id="nav-txt">Find a therapist</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="{{ url_for('ai') }}" style="font-weight: bold;" id="nav-txt">AI assistant</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('yourjourney') }}" style="font-weight: bold;" id="nav-txt">Your journey</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="font-weight: bold;" id="nav-txt">Forums</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('podcast') }}" style="font-weight: bold;" id="nav-txt">Podcast</a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="display: none;" id="sbhide" />
+              <button class="btn btn-outline-success" type="submit" style="display: none;" id="sbhide2">Search</button>
+              <button class="btn btn-outline-danger" style="display: none;" onclick="changeSearchBar2()" id="sbhide3">Cancel</button>
+            </form>
+            <li class="nav-item">
+              <button class="btn" id="btnhide" onclick="changeSearchBar()"><img class="nav-img" src="static/images/dark/search.png" /></button>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="display: none;" id="sbhide" />
+              <button class="btn btn-outline-success" type="submit" style="display: none;" id="sbhide2">Search</button>
+              <button class="btn btn-outline-danger" style="display: none;" onclick="changeSearchBar2()" id="sbhide3">Cancel</button>
+            </form>
+            <li class="nav-item">
+              <button class="btn" id="btnhide" onclick="changeSearchBar()"><img class="nav-img" src="static/images/dark/search.png" /></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <!-- ==================Container 1======================== -->
+      <!-- posts -->
+      <div class="container">
+        <!-- title -->
+        <h1 style="color: #785f7d;font-weight:bold" id="post-title" class="hr-lines">TÂM LÝ MỚI</h1>
+        <p style="text-align: center;">
+          <span id="post-cre">By Yonti</span><span>&nbsp;&nbsp;|&nbsp;&nbsp;</span><span id="post-date">25/7/2023 at 9:30pm</span>
+        </p>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="container" style="background-color: #f3eeee;">
+              <h3 style="font-weight: bold;">Table of content</h3>
+              <a href="#" class="active">Tâm lý con người</a>
+              <br />
+              <a href="#" class="active">Tâm lý mới</a>
+              <br />
+              <a href="#" class="active">Người trẻ</a>
+              <br />
+              <a href="#" class="active">biện pháp</a>
+              <br />
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <p>
+              Tại sao con người lại xuất hiện một số hành vi nhất định? Yếu tố nào ảnh hưởng lên quá trình phát triển của tính cách? Và làm thế nào mà hành vi và trải nghiệm lại giúp định hình tính cách?<br /><br /> Chỉ là một số những câu hỏi mà các nhà tâm lý học đang tìm hiểu, và phương pháp thực nghiệm cho phép các nhà nghiên cứu kiến tạo và kiểm tra các giả thiết qua các thí nghiệm. Bằng cách nghiên cứu những câu hỏi này, các nhà nghiên cứu cũng có thể xây dựng các học thuyết giúp họ mô tả, giải thích, dự đoán và thậm chí là thay đổi hành vi con người.<br /><br />Ví dụ, các nhà nghiên cứu có thể sử dụng thực nghiệm để tìm hiểu xem tại sao con người ta lại có những hành vi không tốt. Bằng cách hiểu rõ hơn về những lý do ẩn giấu lý giải tại sao những hành vi này lại xuất hiện, họ có thể tìm ra cách thức hiệu quả giúp chúng ta tránh được những hành vi tương tự hoặc thay thế những hành vi không tốt bằng những hành vi có lợi hơn.
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <div class="container">
+              <h3>Popular posts</h3>
+              <div class="container">
+                <div class="container">
+                  <div class="container">
+                    <img src="static/images/NullPost.jpg" id="popular-posts" />
+                    <h6 id="pop-post-text" style="font-weight: bold;">Bản năng, bản ngã, và siêu ngã</h6>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div class="container">
+                <div class="container">
+                  <div class="container">
+                    <img src="static/images/NullPost.jpg" id="popular-posts1" />
+                    <h6 id="pop-post-text1" style="font-weight: bold;">Bản năng, bản ngã, và siêu ngã</h6>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div class="container">
+                <div class="container">
+                  <div class="container">
+                    <img src="static/images/NullPost.jpg" id="popular-posts2" />
+                    <h6 id="pop-post-text2" style="font-weight: bold;">Bản năng, bản ngã, và siêu ngã</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <h3>Latest posts</h3>
+              <div class="container">
+                <div class="container">
+                  <div class="container">
+                    <img src="static/images/NullPost.jpg" id="lat-posts" />
+                    <h6 id="lat-post-text" style="font-weight: bold;">Bản năng, bản ngã, và siêu ngã</h6>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div class="container">
+                <div class="container">
+                  <div class="container">
+                    <img src="static/images/NullPost.jpg" id="lat-posts1" />
+                    <h6 id="lat-post-text1" style="font-weight: bold;">Bản năng, bản ngã, và siêu ngã</h6>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div class="container">
+                <div class="container">
+                  <div class="container">
+                    <img src="static/images/NullPost.jpg" id="lat-posts2" />
+                    <h6 id="lat-post-text2" style="font-weight: bold;">Bản năng, bản ngã, và siêu ngã</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <h1 id="related">Related</h1>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <img src="static/images/NullPost2.jpg" id="related-image" />
+              <br />
+              <h3 id="related-title">Vòng xoáy</h3>
+              <p id="related-des">Hành trình tâm lý...</p>
+            </div>
+            <div class="col-sm-4">
+              <img src="static/images/NullPost2.jpg" id="related-image1" />
+              <br />
+              <h3 id="related-title1">Vòng xoáy</h3>
+              <p id="related-des1">Hành trình tâm lý...</p>
+            </div>
+            <div class="col-sm-4">
+              <img src="static/images/NullPost2.jpg" id="related-image1" />
+              <br />
+              <h3 id="related-title2">Vòng xoáy</h3>
+              <p id="related-des2">Hành trình tâm lý...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" style="background-color:#d9d9d9;">
+        <div class="row">
+          <div class="col-sm-3">
+            <img src="static/images/danger.png" class="danger" />
+          </div>
+          <div class="col-sm-9">
+            <p>If you’re in a crisis or any other person maybe in danger - don’t use this site.</p>
+            <p>
+              <a href="#">This sources</a> can provide you with immediate help.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+
+    <!-- ===================footer================= -->
+    <div class="container" style="padding-top:50px">
+      <div class="row">
+        <div class="col-sm-3" style="text-align: center;">
+          <h1 class="footer-header">Need help?</h1>
+          <br />
+          <a href="#" class="btn">Contact us</a>
+          <br />
+          <a href="#" class="btn">Help center</a>
+          <br />
+          <a href="#" class="btn">FAQs</a>
+        </div>
+        <div class="col-sm-4" style="text-align: center;">
+          <h1 class="footer-header">About us</h1>
+          <div class="row">
+            <!-- image -->
+            <div class="col-sm-3">
+              <a href="#"><img src="static/images/dark/mail.png" alt="Gmail" class="footer-center" /></a>
+            </div>
+            <div class="col-sm-3">
+              <a href="#"><img src="static/images/dark/fb.png" alt="Facebook" class="footer-center" /></a>
+            </div>
+            <div class="col-sm-3">
+              <a href="#"><img src="static/images/dark/insta.png" alt="Instagram" class="footer-center" /></a>
+            </div>
+            <div class="col-sm-3">
+              <a href="#"><img src="static/images/dark/yt.png" alt="Youtube" class="footer-center" /></a>
+            </div>
+          </div>
+          <br />
+          <h3>We are J4F</h3>
+          <p>
+            Check us <a href="#">here</a>
+          </p>
+          <br />
+          <h3>We are going to arrive at:</h3>
+          <div class="row">
+            <div class="col-sm-6">
+              <img src="static/images/Google_Play.png" class="footer-center" />
+            </div>
+            <div class="col-sm-6">
+              <img src="static/images/appstore.png" class="footer-center" />
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <h2>Send your feedback to ours</h2>
+          <form action="action_page.php">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name.." />
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name.." />
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+              <option value="australia">Australia</option>
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+              <option value="vietnam">Vietnam</option>
+              <option value="japan">Japan</option>
+              <option value="Korea">Korea</option>
+            </select>
+            <br />
+            <label for="subject">Subject</label>
+            <br />
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            <br />
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==============JAVASCRIPT============= -->
+    <script src="{{url_for('static', filename = 'js/navbar.js')}}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </body>
+</html>

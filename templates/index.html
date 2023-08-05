@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/navbar.css')}}" />
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/footer.css')}}" />
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/home-style.css')}}" />
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+
+
+  <!-- fonts -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!---============================================NAVBAR===================================-->
+  <nav class="navbar navbar-expand navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="static/images/house.png" class="nav-img" id="nav-img"></a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{{ url_for('home') }}" style="font-weight: bold;" id="nav-txt">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('home') }}" style="font-weight: bold;" id="nav-txt">Get Help</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('signin') }}" style="font-weight: bold;" id="nav-txt">Sign in</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('register') }}" style="background-color: #fddada;border-radius:20%;font-weight: bold;"
+              id="nav-txt">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><img src="static/images/dark/user2.png" class="nav-img"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--2nd navbar-->
+  <nav class="navbar navbar-nav navbar-custom2">
+    <div class="container justify-content-center">
+      <h1 class="header-nav">The TheAIpist</h1>
+    </div>
+  </nav>
+
+  <!--3rd navbar - main navbar-->
+  <nav class="navbar navbar-expand-sm navbar-custom2">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{{ url_for('blog') }}" style="font-weight: bold;" id="nav-txt">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" style="font-weight: bold;" id="nav-txt">Find a therapist</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{{ url_for('ai') }}" style="font-weight: bold;" id="nav-txt">AI assistant</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('yourjourney') }}" style="font-weight: bold;" id="nav-txt">Your journey</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="font-weight: bold;" id="nav-txt">Forums</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('podcast') }}" style="font-weight: bold;" id="nav-txt">Podcast</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+              style="display: none;" id="sbhide">
+            <button class="btn btn-outline-success" type="submit" style="display: none;" id="sbhide2">Search</button>
+            <button class="btn btn-outline-danger" style="display: none;" onclick="changeSearchBar2()"
+              id="sbhide3">Cancel</button>
+          </form>
+          <li class="nav-item">
+            <button class="btn" id="btnhide" onclick="changeSearchBar()"><img class="nav-img"
+                src="static/images/dark/search.png"></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container-fluid">
+    <!--==================Container 1: Showcase========================-->
+    <!--carousel-->
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="static/images/pic1.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption">
+            <h1 class = "float-left">Regain your inner<br>equilibrium with us.</h1>
+            <p class="lead">Discover yourself and build mental strength<br>for your mental health<br><br><span><a class="btn" href="#"
+              style="background-color: aliceblue;">Discover the world within you</a></span></p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="static/images/pic1.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption">
+            <h1>Regain your inner<br>equilibrium with us.</h1>
+            <p class="lead">Discover yourself and build mental strength<br>for your mental health<br><br><span><a class="btn" href="#"
+            style="background-color: aliceblue;">Discover the world within you</a></span></p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="static/images/pic1.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption">
+            <h1>Regain your inner<br>equilibrium with us.</h1>
+            <p class="lead">Discover yourself and build mental strength<br>for your mental health<br><br><span><a class="btn" href="#"
+            style="background-color: aliceblue;">Discover the world within you</a></span></p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="container" style="background-color: #d9d9d9;">
+    <h1 style="text-align: center;font-family:Merriweather;padding-top:30px;font-weight:bold">Empower your mind
+      with<br> confidence trust and care</h1>
+  </div>
+  <div class="container" style="padding-top: 30px;background-color: #d9d9d9;">
+    <div class="row">
+      <div class="col-sm-4">
+        <img src="static/images/dark/chat.png" class="center">
+        <p style="font-weight: bold;text-align:center">Talk to AI assistant interactively, securely, privately</p>
+      </div>
+      <div class="col-sm-4">
+        <img src="static/images/dark/flowey.png" class="center">
+        <p style="font-weight: bold;text-align:center">Immerse, meditate and listen. Meditation exercises with natural
+          sounds that help you relax</p>
+      </div>
+      <div class="col-sm-4">
+        <img src="static/images/dark/heart.png" class="center">
+        <p style="font-weight: bold;text-align:center">Track your progress and provide checklist to improve your
+          mental strength. Drive meaningful topics everyday</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <img src="static/images/dark/ribbon.png" class="center">
+        <p style="font-weight: bold;text-align:center">Speak with a licensed online therapist at an affordable cost
+        </p>
+      </div>
+      <div class="col-sm-6">
+        <img src="static/images/dark/star.png" class="center">
+        <p style="font-weight: bold;text-align:center">Blog with useful guide and information about mental health</p>
+      </div>
+    </div>
+  </div>
+  </div>
+  <br>
+  <div class="container" style="background-color:#d9d9d9;">
+    <div class="row">
+      <div class="col-sm-3">
+        <img src="static/images/danger.png" class="danger">
+      </div>
+      <div class="col-sm-9">
+        <p>If you’re in a crisis or any other person maybe in danger - don’t use this site.</p>
+        <p><a href="#">This sources</a> can provide you with immediate help.</p>
+      </div>
+    </div>
+  </div>
+
+  <!--===================footer=================-->
+  <div class="container" style="padding-top:50px">
+    <div class="row">
+      <div class="col-sm-3" style="text-align: center;">
+        <h1 class="footer-header">Need help?</h1>
+        <br>
+        <a href="#" class="btn">Contact us</a>
+        <br>
+        <a href="#" class="btn">Help center</a>
+        <br>
+        <a href="#" class="btn">FAQs</a>
+      </div>
+      <div class="col-sm-4" style="text-align: center;">
+        <h1 class="footer-header">About us</h1>
+        <div class="row"><!--image-->
+          <div class="col-sm-3">
+            <a href="#"><img src="static/images/dark/mail.png" alt="Gmail" class="footer-center"></a>
+          </div>
+          <div class="col-sm-3">
+            <a href="#"><img src="static/images/dark/fb.png" alt="Facebook" class="footer-center"></a>
+          </div>
+          <div class="col-sm-3">
+            <a href="#"><img src="static/images/dark/insta.png" alt="Instagram" class="footer-center"></a>
+          </div>
+          <div class="col-sm-3">
+            <a href="#"><img src="static/images/dark/yt.png" alt="Youtube" class="footer-center"></a>
+          </div>
+        </div>
+        <br>
+        <h3>We are J4F</h3>
+        <p>Check us <a href="#">here</a></p>
+        <br>
+        <h3>We are going to arrive at:</h3>
+        <div class="row">
+          <div class="col-sm-6">
+            <img src="static/images/Google_Play.png" class="footer-center">
+          </div>
+          <div class="col-sm-6">
+            <img src="static/images/appstore.png" class="footer-center">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-5">
+        <h2>Send your feedback to ours</h2>
+        <form action="action_page.php">
+
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+            <option value="vietnam">Vietnam</option>
+            <option value="japan">Japan</option>
+            <option value="Korea">Korea</option>
+          </select>
+          <br>
+          <label for="subject">Subject</label>
+          <br>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          <br>
+          <input type="submit" value="Submit">
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!--==============JAVASCRIPT=============-->
+  <script src="{{url_for('static', filename = 'js/navbar.js')}}"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+
+</html>
